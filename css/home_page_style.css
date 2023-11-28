@@ -402,6 +402,7 @@ body {
 
 .slick-active button {
   background: transparent;
+  border: 2px solid black;
 }
 
 .menu {
