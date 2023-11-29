@@ -35,7 +35,7 @@
                                 alt="" class="icons"></a>
                         <a href="#"><img src="./images/logo/Viber.svg" alt="" class="icons"></a>
                         <a href="https://t.me/egerzp"><img src="./images/logo/телегр.svg" alt="" class="icons"></a>
-                        <a href="#"><img src="./images/logo/mail 1.svg" alt="" class="icons"></a>
+                        <a href="#"><img src="./images/logo/mail 1.svg" alt="" class="icons btn"></a>
                     </div>
                 </div>
             </div>
@@ -663,23 +663,24 @@
 
     <div class="wrapper">
         <div class="form">
-            <button class="cloze"><img src="./assets/icons/cloze.png" alt=""></button>
-            <form action="#" id="form" class="form__body">
-                <h1 class="form__title">надсилання даних на пошту</h1>
-                <div class="form__item">
-                    <label for="formName" class="form__lable">ім'я*</label>
-                    <input id="formName" type="text" name="name" class="form__input req ">
-                </div>
-                <div class="form__item">
-                    <label for="formEmail" class="form__lable">Е-маїл*</label>
-                    <input id="formEmail" type="text" name="Email" class="form__input req email ">
-                </div>
-                <div class="form__item">
-                    <label for="formMessage" class="form__lable">повідомлення</label>
-                    <textarea name="message" id="formMessage" class="form__input"></textarea>
-                </div>
-            </form>
-            <button type="submit" class="form__button">Відправити</button>
+            <button class="cloze"><img src="./images/logo/icons.svg" alt=""></button>
+                <form action="#" id="form" >
+                    <h1 class="form__title">надсилання даних на пошту</h1>
+                    <div class="form__item">
+                        <label for="formName" class="form__lable">ім'я <span>*</span></label>
+                        <input id="formName" type="text"  placeholder="Ваше і'мя" name="name" class="form__input" required>
+                    </div>
+                    <div class="form__item">
+                        <label for="formEmail" class="form__lable">Е-маїл <span>*</span></label>
+                        <input id="formEmail" type="email" name="Email" placeholder="Ваш E-mail" class="form__input" required>
+                    </div>
+                    <div class="form__item">
+                        <label for="formMessage" class="form__lable">повідомлення <span>*</span></label>
+                        <textarea name="message" id="formMessage" placeholder="Ваше повідомлення" class="form__input message" required></textarea>
+                    </div>
+                    <button type="submit"  class="form__button">Відправити</button>
+                </form>
+                
         </div>
     </div>
 </body>
