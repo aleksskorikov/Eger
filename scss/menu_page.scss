@@ -1,0 +1,110 @@
+@import "./Email.scss";
+@import "./fotter.scss";
+@import "./_header.scss";
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    background: #EEE8AA;
+}
+main{
+    flex: 1 1 auto;
+}
+
+.conteiner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+
+// main
+
+.menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu__title {
+    text-align: center;
+    font-size: 6rem;
+    margin: 2rem;
+}
+
+.menu__one {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 3rem;
+    border: 2px solid rgb(69, 69, 69);
+    background: #ece493;
+}
+
+.menu__subtitle {
+    text-align: center;
+    font-size: 3rem;
+}
+
+.menu__items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu__img {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+}
+
+.menu__name {
+    font-size: 1.5rem;
+    width: 15rem;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.on-all {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    top: 90%;
+    right: 1%;
+    background-image: url(../images/logo/rocket\ 1.svg);
+    border-radius: 10px;
+    border: 1px solid;
+    transition-duration: 1s;
+    animation-name: on-all;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+    &:hover {
+        background: url(../images/logo/rocket2.svg);
+        animation-play-state: paused;
+    }
+}
+
+@keyframes on-all {
+    0% {
+        top: 90%;
+        right: 1%;
+    }
+
+    100% {
+        top: 70%;
+        right: 1%;
+    }
+}
