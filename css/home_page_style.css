@@ -419,12 +419,12 @@ body {
   flex-direction: column;
   transition: 1s;
   backface-visibility: hidden;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 .menu .front {
   position: absolute;
   background: #bdb36b;
-  border: 4px solid #bdb55b;
+  border: 2px solid #bdb55b;
 }
 .menu .front img {
   width: 300px;
@@ -448,6 +448,7 @@ body {
   position: relative;
   background: rgba(189, 183, 107, 0.8941176471);
   border: 4px solid #bdb55b;
+  box-shadow: inset 50px 50px 50px 50px rgba(200, 190, 89, 0.7215686275);
 }
 .menu .back ul {
   padding-left: 2rem;
@@ -455,19 +456,20 @@ body {
 .menu .back li {
   text-align: start;
   list-style: disc;
-  margin: 0.5rem;
+  margin: 0.7rem;
 }
 .menu:hover .back {
   transform: rotateY(360deg);
 }
 .menu:hover .back .back-title {
   font-size: 1.6rem;
-  color: black;
+  font-weight: bold;
+  color: rgb(40, 39, 39);
   margin: 1rem;
   text-transform: uppercase;
 }
 .menu:hover .back .back-title:hover {
-  color: rgb(97, 94, 94);
+  color: rgb(45, 44, 44);
 }
 .menu:hover .back .back-list {
   color: black;
@@ -476,7 +478,7 @@ body {
   text-transform: uppercase;
 }
 .menu:hover .back .back-list:hover {
-  color: rgb(97, 94, 94);
+  color: rgb(62, 61, 61);
 }
 
 .wrapper {

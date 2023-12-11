@@ -230,13 +230,13 @@ body{
     flex-direction: column;
     transition: 1s;
     backface-visibility: hidden;
-    border-radius: 10px;
+    border-radius: 15px;
     }
 
     .front {
         position: absolute;
         background: #bdb36b;
-        border: 4px solid #bdb55b;
+        border: 2px solid #bdb55b;
         img {
             width: 300px;
             height: 335px;
@@ -261,24 +261,26 @@ body{
     position: relative;
     background: #bdb76be4;
     border: 4px solid #bdb55b;
+    box-shadow: inset 50px 50px 50px 50px#c8be59b8;
     ul{
     padding-left: 2rem;
     }
     li {
     text-align: start;
     list-style: disc;
-    margin: 0.5rem;
+    margin: 0.7rem;
     }
     }
     &:hover .back{
     transform: rotateY(360deg);
     .back-title {
     font-size: 1.6rem;
-    color: black;
+    font-weight: bold;
+    color: rgb(40, 39, 39);
     margin: 1rem;
     text-transform: uppercase;
     &:hover{
-    color: rgb(97, 94, 94);
+    color: rgb(45, 44, 44);
     }
     }
 
@@ -288,7 +290,7 @@ body{
         padding-top: 1rem;
         text-transform: uppercase;
         &:hover{
-        color: rgb(97, 94, 94);
+        color: rgb(62, 61, 61);
         }
     }
     }
