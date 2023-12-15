@@ -66,6 +66,7 @@ body{
 	text-transform: uppercase;
 	font-weight: 700;
 	margin: 3% 0; 
+    text-shadow: 3px 3px 30px  #2b2b29;
 }
 
 .section__info {
@@ -76,11 +77,13 @@ body{
     align-items: center;
     background: #dcd79d;
     font-family: 'Pacifico', cursive;
+    box-shadow: 10px 10px 25px 1px #b4b071;
 }
+
 
 .section__foto {
     flex: 0 0 60%;
-    background-image: url(../images/img/hanter-foto/hanter1\ 1.svg);
+    background-image: url(../images/img/hanter-foto/охота\ секция\ \(1\).jpg);
     height: 400px;
     background-position: center;
     background-size: cover;
@@ -223,6 +226,7 @@ body{
     display: flex;
     justify-content: center;
     
+    
 
     .front,.back {
     display: flex;
@@ -231,6 +235,7 @@ body{
     transition: 1s;
     backface-visibility: hidden;
     border-radius: 15px;
+    box-shadow: 10px 10px 25px  #a8a46b;
     }
 
     .front {
