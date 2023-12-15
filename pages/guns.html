@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="../css/resets.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="../scripts/slick.min.js" defer></script>
-    <script src="../scripts/script.js" defer></script>
+    <script src="../scripts/script_page.js" defer></script>
+    <script src="../scripts/email.js" defer></script>
     <title>EGER</title>
 </head>
 <body>
@@ -44,48 +45,132 @@
 
     <main>
         <div class="conteiner">
+            <div class="slider">
+                <img src="/images/pages img/1 ружья.jpg" alt="">
+                <img src="/images/pages img/2 ружья.webp" alt="">
+                <img src="/images/pages img/3 ружья.jpg" alt="">
+                <img src="/images/pages img/4 ружья.jpg" alt="">
+            </div>
             <div class="menu">
                 <h1 class="menu__title">ружья</h1>
-                <h2 class="menu__subtitle">нарезніе</h2>
-                <div class="menu__one">
-                    <div class="menu__items">
-                        <img src="../images/menu img/помповое.avif" alt="" class="menu__img">
-                        <p class="menu__name">напівавтомотичні</p>
+                <h2 class="menu__subtitle"  >нарезніе</h2>
+                <div class="menu__one" id="menu-one">
+                    <div class="menu__items ">
+                        <img src="../images/menu img/помповое.avif" alt="" class="menu__img activ" data-id="all-category1">
+                        <p class="menu__name " >Всі нарізні</p>
+                    </div>
+                    <div class="menu__items" >
+                        <img src="../images/menu img/помповое.avif" alt="" class="menu__img" data-id="product-category1">
+                        <p class="menu__name" >напівавтомотичні</p>
                     </div>
                     <div class="menu__items">
-                        <img src="../images/menu img/помповое.avif" alt="" class="menu__img">
-                        <p class="menu__name">Штуцери</p>
+                        <img src="../images/menu img/помповое.avif" alt="" class="menu__img" data-id="product-category2">
+                        <p class="menu__name" >Штуцери</p>
                     </div>
                     <div class="menu__items">
-                        <img src="../images/menu img/помповое.avif" alt="" class="menu__img">
-                        <p class="menu__name">з поздовжньо-ковзним затвором</p>
+                        <img src="../images/menu img/помповое.avif" alt="" class="menu__img" data-id="product-category3">
+                        <p class="menu__name" >з поздовжньо-ковзним затвором</p>
                     </div>
                 </div>
+
+                <div class="products__card">
+        
+                        <div class="card product-category1">
+                            <img src="../images/product img/1.jpg" alt="" class="card-img">
+                            <p class="product-name">🔥Гвинтівка малокаліберна Savage B22 FV-SR 16,25" кал .22 LR 1/2"-28🔥</p>
+                            <p class="product-price">12000 грн.</p>
+                        </div>
+                    
+                        <div class="card product-category2">
+                            <img src="../images/product img/1.jpg" alt="" class="card-img">
+                            <p class="product-name">🔥Гвинтівка малокаліберна Savage B22 FV-SR 16,25" кал .22 LR 1/2"-28🔥</p>
+                            <p class="product-price">12000 грн.</p>
+                        </div>
+                        <div class="card product-category2">
+                            <img src="../images/product img/1.jpg" alt="" class="card-img">
+                            <p class="product-name">🔥Гвинтівка малокаліберна Savage B22 FV-SR 16,25" кал .22 LR 1/2"-28🔥</p>
+                            <p class="product-price">12000 грн.</p>
+                        </div>
+                    
+                        <div class="card product-category3" >
+                            <img src="../images/product img/1.jpg" alt="" class="card-img">
+                            <p class="product-name">🔥Гвинтівка малокаліберна Savage B22 FV-SR 16,25" кал .22 LR 1/2"-28🔥</p>
+                            <p class="product-price">12000 грн.</p>
+                        </div>
+                        <div class="card product-category3">
+                            <img src="../images/product img/1.jpg" alt="" class="card-img">
+                            <p class="product-name">🔥Гвинтівка малокаліберна Savage B22 FV-SR 16,25" кал .22 LR 1/2"-28🔥</p>
+                            <p class="product-price">12000 грн.</p>
+                        </div>
+                        <div class="card product-category3">
+                            <img src="../images/product img/1.jpg" alt="" class="card-img">
+                            <p class="product-name">🔥Гвинтівка малокаліберна Savage B22 FV-SR 16,25" кал .22 LR 1/2"-28🔥</p>
+                            <p class="product-price">12000 грн.</p>
+                        </div>
+                    
+                </div>
+
                 <h2 class="menu__subtitle">Гладкоствольные</h2>
-                <div class="menu__one">
+                <div class="menu__one" id="menu-two">
                     <div class="menu__items">
-                        <img src="../images/menu img/помповое.avif" alt="" class="menu__img">
+                        <img src="../images/menu img/помповое.avif" alt="" class="menu-two__img activ" data-id="all-category-two2">
+                        <p class="menu__name">Всі гладкоствольні</p>
+                    </div>
+                    <div class="menu__items">
+                        <img src="../images/menu img/помповое.avif" alt="" class="menu-two__img" data-id="product-category-two1">
                         <p class="menu__name">переломні</p>
                     </div>
                     <div class="menu__items">
-                        <img src="../images/menu img/помповое.avif" alt="" class="menu__img">
+                        <img src="../images/menu img/помповое.avif" alt="" class="menu-two__img" data-id="product-category-two2">
                         <p class="menu__name">напівавтоматичні</p>
                     </div>
+                    
                     <div class="menu__items">
-                        <img src="../images/menu img/помповое.avif" alt="" class="menu__img">
-                        <p class="menu__name">зі скобою Генрі</p>
-                    </div>
-                    <div class="menu__items">
-                        <img src="../images/menu img/помповое.avif" alt=""class="menu__img">
+                        <img src="../images/menu img/помповое.avif" alt=""class="menu-two__img" data-id="product-category-two3">
                         <p class="menu__name">помпові</p>
                     </div>
                     <div class="menu__items">
-                        <img src="../images/menu img/помповое.avif" alt="" class="menu__img">
-                        <p class="menu__name">з продольно-ковзним затвором</p>
+                        <img src="../images/menu img/помповое.avif" alt="" class="menu-two__img" data-id="product-category-two4">
+                        <p class="menu__name" >з продольно-ковзним затвором</p>
                     </div>
                 </div>
+                <div class="products__card">
+                    <div class="card-two product-category-two1">
+                        <img src="../images/product img/1.jpg" alt="" class="card-img">
+                        <p class="product-name">🔥Гвинтівка малокаліберна Savage B22 FV-SR 16,25" кал .22 LR 1/2"-28🔥</p>
+                        <p class="product-price" data-id="block4">12000 грн.</p>
+                    </div>
+                    <div class="card-two product-category-two2">
+                        <img src="../images/product img/1.jpg" alt="" class="card-img">
+                        <p class="product-name">🔥Гвинтівка малокаліберна Savage B22 FV-SR 16,25" кал .22 LR 1/2"-28🔥</p>
+                        <p class="product-price">12000 грн.</p>
+                    </div>
+                    <div class="card-two product-category-two3">
+                        <img src="../images/product img/1.jpg" alt="" class="card-img">
+                        <p class="product-name">🔥Гвинтівка малокаліберна Savage B22 FV-SR 16,25" кал .22 LR 1/2"-28🔥</p>
+                        <p class="product-price">12000 грн.</p>
+                    </div>
+                    <div class="card-two product-category-two3">
+                        <img src="../images/product img/1.jpg" alt="" class="card-img">
+                        <p class="product-name">🔥Гвинтівка малокаліберна Savage B22 FV-SR 16,25" кал .22 LR 1/2"-28🔥</p>
+                        <p class="product-price">12000 грн.</p>
+                    </div>
+                    <div class="card-two product-category-two4">
+                        <img src="../images/product img/1.jpg" alt="" class="card-img">
+                        <p class="product-name">🔥Гвинтівка малокаліберна Savage B22 FV-SR 16,25" кал .22 LR 1/2"-28🔥</p>
+                        <p class="product-price">12000 грн.</p>
+                    </div>
+                    <div class="card-two product-category-two4">
+                        <img src="../images/product img/1.jpg" alt="" class="card-img">
+                        <p class="product-name">🔥Гвинтівка малокаліберна Savage B22 FV-SR 16,25" кал .22 LR 1/2"-28🔥</p>
+                        <p class="product-price">12000 грн.</p>
+                    </div>
+                </div>
+
             </div>
         </div>
+
+        
         
     </main>
 

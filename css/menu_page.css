@@ -429,6 +429,21 @@ main {
   padding: 0 15px;
 }
 
+.slider {
+  position: relative;
+  margin-top: 1rem;
+}
+
+.slick-list {
+  height: 30rem;
+  overflow: hidden;
+}
+
+.slick-track {
+  display: flex;
+  text-align: center;
+}
+
 .menu {
   display: flex;
   flex-direction: column;
@@ -445,9 +460,10 @@ main {
   justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
-  margin: 3rem;
+  margin: 3rem 0;
   border: 2px solid rgb(69, 69, 69);
   background: #ece493;
+  padding: 2rem;
 }
 
 .menu__subtitle {
@@ -459,9 +475,15 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  cursor: pointer;
+  padding-top: 15px;
 }
 
-.menu__img {
+.activ {
+  border: 10px solid gray;
+}
+
+.menu__img, .menu-two__img {
   width: 10rem;
   height: 10rem;
   border-radius: 50%;
@@ -471,6 +493,39 @@ main {
   font-size: 1.5rem;
   width: 15rem;
   text-align: center;
+}
+
+.products__card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  cursor: pointer;
+}
+
+.card, .card-two {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20rem;
+  border: 4px solid rgb(98, 97, 97);
+  background: #ece493;
+  border-radius: 10px;
+}
+
+.card-img {
+  border-radius: 5px;
+  width: 100%;
+}
+
+.product-name {
+  font-size: 1.5rem;
+  padding: 1rem 0;
+}
+
+.product-price {
+  font-size: 2rem;
+  color: red;
 }
 
 .on-all {
