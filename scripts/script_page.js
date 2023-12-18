@@ -55,6 +55,15 @@ function filterMenuOne() {
             break;
             case "product-category4":
                 items(targetid);
+                break;
+            case "product-category5":
+                items(targetid);
+                break;
+            case "product-category6":
+                items(targetid);
+                break;
+            case "product-category7":
+                items(targetid);
             break;
         }
     })
