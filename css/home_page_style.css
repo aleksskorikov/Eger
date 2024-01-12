@@ -315,7 +315,6 @@ body {
 
 .section__info {
   display: flex;
-  max-height: 400px;
   border: 2px solid #b5b05e;
   border-radius: 10px;
   align-items: center;
@@ -672,5 +671,35 @@ body {
   100% {
     top: 70%;
     right: 1%;
+  }
+}
+@media (max-width: 900px) {
+  .section__info {
+    flex-direction: column;
+  }
+  .nav__menu {
+    flex-wrap: wrap;
+  }
+  .section__title {
+    font-size: 2rem;
+  }
+  .section__foto {
+    flex: none;
+    height: 200px;
+    width: 100%;
+  }
+}
+@media (max-width: 840px) {
+  .section__title {
+    font-size: 1.5rem;
+  }
+  .slider {
+    padding: 0 5px;
+  }
+  .slick-arrow {
+    width: 0;
+  }
+  .menu {
+    width: 200px;
   }
 }/*# sourceMappingURL=home_page_style.css.map */

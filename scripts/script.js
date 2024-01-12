@@ -3,6 +3,20 @@ $(document).ready(function () {
 		dots: true,
 		slidesToShow: 3,
 		// centerMode: true,
+		responsive: [
+		{
+			breakpoint: 1100,
+			settings: {
+				slidesToShow: 2,
+			}
+		},
+		{
+			breakpoint: 800,
+			settings: {
+				slidesToShow: 1,
+			}
+			},
+	]
 	});
 })
 
