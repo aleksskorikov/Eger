@@ -483,17 +483,22 @@ body {
 
 footer {
   background: #BDB76B;
+  margin-top: 5rem;
 }
 
 .footer__block {
   display: flex;
   justify-content: space-between;
-  margin-top: 5rem;
+}
+
+.footer__block-adaptiv {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .footer__sety {
-  text-align: center;
-  margin: 1rem 0 0 4rem;
+  margin: 1rem 0;
 }
 
 .footer-title {
@@ -513,8 +518,7 @@ footer {
 }
 
 .footer__body {
-  text-align: center;
-  margin-top: 1rem;
+  margin: 1rem auto;
 }
 
 .footer__title {
@@ -543,10 +547,6 @@ footer {
 @media (max-width: 1025px) {
   .footer__block {
     flex-direction: column;
-  }
-  .footer__block-adaptiv {
-    display: flex;
-    justify-content: space-between;
   }
   .footer__body {
     margin-right: 3rem;
