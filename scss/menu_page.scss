@@ -90,7 +90,7 @@ main{
 
 .menu__name {
     font-size: 1.5rem;
-    width: 15rem;
+    max-width: 15rem;
     text-align: center;
 }
 
@@ -167,4 +167,39 @@ main{
         top: 70%;
         right: 1%;
     }
+}
+
+@media (max-width: 550px) {
+    
+    
+    
+        .menu__title {
+            font-size: 4rem;
+        }
+        .menu__subtitle {
+            font-size: 2rem;
+        }
+        .menu__one {
+            padding: 1rem;
+        }
+    
+        .menu__img, .menu-two__img {
+            width: 4rem;
+            height: 4rem;
+        }
+    
+        .menu__name {
+            font-size: 1rem;
+        }
+        .card, .card-two {
+            width: 10rem;
+        }
+
+        .product-name {
+            font-size: 1rem;
+        }
+    
+        .product-price {
+            font-size: 1.5rem;
+        }
 }
