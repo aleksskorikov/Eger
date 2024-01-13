@@ -1,53 +1,146 @@
 
-
-.footer{
+footer{
     background: #BDB76B;
-    .conteiner{
-        display: flex;
-        justify-content: space-between;
-        
-        margin-top: 5rem;
-    .footer__body{
-        text-align: center;
-        margin-top: 1rem;
-        .footer__title{
-            font-size: 4rem;
-        }
-        .footer__subtitle{
-            font-size: 3rem;
-        }
-        .footer__alladres{
-            font-size: 2rem;
-            a{
-                color: black;
-            }
-            .footer__adres{
-                padding-bottom: 1rem;
-            }
-        }
+}
+.footer__block {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5rem;
+}
+
+.footer__sety {
+    text-align: center;
+    margin: 1rem 0 0 4rem;
+}
+
+.footer-title {
+    font-size: 3rem;
+}
+
+.footer__sety-one {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+}
+
+.icons {
+    border-radius: 5px;
+}
+
+.footer__body {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.footer__title {
+    font-size: 4rem;
+}
+
+.footer__subtitle {
+    font-size: 3rem;
+}
+
+.footer__alladres {
+    font-size: 2rem;
+    a{
+        color: black;
     }
-    .footer__sety{
-        text-align: center;
-        margin: 1rem 0 0 4rem;
-        .footer-title{
-            font-size: 3rem;
-        }
-        .footer__sety1{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 1.5rem;
-            margin-top: 2.5rem;
-            img{
-                border-radius: 5px;
-            }
-        }
-        
+    .footer__adres{
+        padding-bottom: 1rem;
     }
-    .footer__map{
-        border: 2px solid black;
-        border-radius: 5px;
+}
+
+.footer__map {
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+@media (max-width: 1025px) {
+.footer__block {
+    flex-direction: column;
+}
+.footer__block-adaptiv{
+    display: flex;
+    justify-content: space-between;
+}
+.footer__body{
+    margin-right: 3rem;
+}
+.footer__sety-one{
+    gap: 1rem;
+}
+.footer__sety {
+    text-align: center;
+    margin: 1rem 0 0 3rem;
+}
+
+.footer-title {
+    font-size: 2rem;
+}
+.footer__title {
+    font-size: 3rem;
+}
+
+.footer__subtitle {
+    font-size: 2rem;
+}
+.footer__map{
+    margin-top: 1rem;
+}
+.footer__map-body {
+    width: 100%;
+}
+}
+
+
+@media (max-width: 550px) {
+    .footer__block-adaptiv {
+        flex-direction: column;
+    }
+
+    .footer__body {
+        margin:  auto;
+    }
+
+    .footer__sety-one {
+        gap: 2rem;
+        margin: 0.5rem auto;
+    }
+    .icons{
+        width: 25px;
+        height: 25px;
+        margin: 0;
+    }
+    .footer__sety {
+        margin: 0.5rem auto;
+    }
+
+    .footer-title {
+        font-size: 1rem;
+    }
+
+    .footer__title {
+        font-size: 2rem;
+    }
+
+    .footer__subtitle {
+        font-size: 1rem;
+    }
+    .footer__alladres{
+        font-size: 1rem;
+        .footer__adres{
+        padding-bottom: 0.5rem;
     }
     }
     
+    .tel-logo{
+        width: 15px;
+        height: 15px;
+    }
+
+    .on-all{
+        display: none;
+    }
 }
