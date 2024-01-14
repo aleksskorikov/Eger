@@ -42,7 +42,6 @@
 }
 .header__item-tel, .header__item-adres {
     font-size: 2rem;
-    // color: black;
 }
 
 .header__item-img {
@@ -71,7 +70,14 @@
     }
 }
 
-
+.heder__block-adaptiv-grid {
+    grid-template-rows: 150px 1fr;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;  
+    padding-top: 20px;
+    display: none;
+}
 
 
 // PC
@@ -129,23 +135,23 @@
 
 @media (max-width: 550px) {
     .heder__item{
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        padding: 0 3rem 0 0.2rem;
+        display: none;
     }
     .header__data{
         margin-top: -1rem;
     }
     .heder__block-adaptiv{
-        justify-content: space-between;
-        width: 100%;
+        display: none;
     }
-    .heder__block{
-            flex-direction: column;
-            width: 100%;
-            padding-bottom: 1rem;
-        }
+    .heder__block-adaptiv-grid {
+        display: grid;
+        grid-template-rows: 150px 1fr;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        align-items: center; 
+        padding-bottom: 1rem; 
+    }    
+
     .header__sety{
         gap: 1rem;
     }
@@ -158,3 +164,6 @@
         width: 20px;
     }
 }
+
+
+

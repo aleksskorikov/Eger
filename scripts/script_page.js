@@ -75,43 +75,45 @@ function items(className) {
         product.classList.contains(className) ? product.style = `display: flex` : product.style = `display: none`;
     })
 }
+if (listTwo) {
+    function filterMenuTwo() {
+        listTwo.addEventListener(`click`, event => {
+            const targetid = event.target.dataset.id;
+            const target = event.target;
 
-function filterMenuTwo() {
-    listTwo.addEventListener(`click`, event => {
-		const targetid = event.target.dataset.id;
-		const target = event.target;
+            if (target.classList.contains("menu-two__img")) {
+                listItemsTwo.forEach(listItem => listItem.classList.remove("activ"));
+                target.classList.add("activ");
+            }
 
-		if (target.classList.contains("menu-two__img")) {
-			listItemsTwo.forEach(listItem => listItem.classList.remove("activ"));
-			target.classList.add("activ");
-		}
+            switch (targetid) {
+                case "all-category-two2":
+                    item("card-two");
+                break;
+                case "product-category-two1":
+                    item(targetid);
+                break;
+                case "product-category-two2":
+                    item(targetid);
+                break;
+                case "product-category-two3":
+                    item(targetid);
+                break;
+                case "product-category-two4":
+                    item(targetid);
+                break;
+            }
+        })
+    };
 
-        switch (targetid) {
-            case "all-category-two2":
-                item("card-two");
-            break;
-            case "product-category-two1":
-                item(targetid);
-            break;
-            case "product-category-two2":
-                item(targetid);
-            break;
-            case "product-category-two3":
-                item(targetid);
-            break;
-            case "product-category-two4":
-                item(targetid);
-            break;
-        }
-    })
-}
-filterMenuTwo();
+    filterMenuTwo();
 
-function item(className) {
-    productsTwo.forEach(product => {
-        product.classList.contains(className) ? product.style = `display: block` : product.style = `display: none`;
-    })
-}
+    function item(className) {
+        productsTwo.forEach(product => {
+            product.classList.contains(className) ? product.style = `display: block` : product.style = `display: none`;
+        })
+    }
+};
 
 
 
