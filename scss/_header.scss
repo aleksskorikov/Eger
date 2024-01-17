@@ -122,7 +122,6 @@
     .header-title {
         font-size: 4rem;
     }
-    
     .header-subtitle {
         font-size: 2rem;
     }
@@ -134,6 +133,10 @@
 
 
 @media (max-width: 550px) {
+    .conteiner{
+        max-width: 100%;
+        width: 100%;
+    }
     .heder__item{
         display: none;
     }
@@ -151,7 +154,6 @@
         align-items: center; 
         padding-bottom: 1rem; 
     }    
-
     .header__sety{
         gap: 1rem;
     }
@@ -165,5 +167,18 @@
     }
 }
 
-
-
+@media (max-width: 350px) {
+    .conteiner {
+        width: 100%;
+    }
+    .header__logo-img {
+        width: 130px;
+        border-radius: 50%;
+    }
+    .header_-title {
+        font-size: 3rem;
+    }
+    .header__sety {
+        gap: 0.5rem;
+    }
+}

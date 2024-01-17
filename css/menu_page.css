@@ -366,6 +366,10 @@ footer {
   }
 }
 @media (max-width: 550px) {
+  .conteiner {
+    max-width: 100%;
+    width: 100%;
+  }
   .heder__item {
     display: none;
   }
@@ -393,6 +397,21 @@ footer {
   }
   .header__item-img {
     width: 20px;
+  }
+}
+@media (max-width: 350px) {
+  .conteiner {
+    width: 100%;
+  }
+  .header__logo-img {
+    width: 130px;
+    border-radius: 50%;
+  }
+  .header_-title {
+    font-size: 3rem;
+  }
+  .header__sety {
+    gap: 0.5rem;
   }
 }
 body {

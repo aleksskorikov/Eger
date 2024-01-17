@@ -22,8 +22,6 @@
 	}
 }
 
-
-
 body{
     background: #EEE8AA;
 }
@@ -155,14 +153,14 @@ body{
     align-items: center;
     justify-content: center;
     button{
-    font-size: 0;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: white;
+        font-size: 0;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: white;
     }
     li{
-    margin: 0 10px;
+        margin: 0 10px;
     }
 }
 .slick-active button{
@@ -255,8 +253,6 @@ body{
     }
     &:hover .back{
     transform: rotateY(360deg);
-
-    
     }
 }
 
@@ -280,7 +276,6 @@ body{
     animation-duration: 5s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
-
     &:hover {
         background: url(../images/logo/rocket2.svg);
         animation-play-state: paused;
@@ -292,7 +287,6 @@ body{
         top: 90%;
         right: 1%;
     }
-
     100% {
         top: 70%;
         right: 1%;
@@ -324,10 +318,26 @@ body{
     .slider{
         padding: 0 5px;
     }
-.slick-arrow {
-    width: 0;
+    .slick-arrow {
+        width: 0;
+    }
+    .menu{
+        width: 200px;
+    }
 }
-.menu{
-    width: 200px;
-}
+
+@media (max-width: 350px) {
+    .conteiner{
+        width: 100%;
+    }
+    .section__title {
+        font-size: 17px;
+    }
+    .menu .front img{
+        width: 250px;
+        height: 300px;
+    }
+    .section{
+        margin-top: 2rem;
+    }
 }
