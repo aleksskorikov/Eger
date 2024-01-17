@@ -225,17 +225,6 @@ body{
     background: #bdb76be4;
     border: 4px solid #bdb55b;
     box-shadow: inset 50px 50px 50px 50px#c8be59b8;
-    ul{
-    padding-left: 2rem;
-    }
-    li {
-    text-align: start;
-    list-style: disc;
-    margin: 0.7rem;
-    }
-    }
-    &:hover .back{
-    transform: rotateY(360deg);
     .back-title {
     font-size: 1.6rem;
     font-weight: bold;
@@ -246,7 +235,13 @@ body{
     color: rgb(45, 44, 44);
     }
     }
-
+    ul{
+    padding-left: 2rem;
+    }
+    li {
+    text-align: start;
+    list-style: disc;
+    margin: 0.7rem;
     .back-list {
         color: black;
         font-size: 1.2rem;
@@ -256,6 +251,12 @@ body{
         color: rgb(62, 61, 61);
         }
     }
+    }
+    }
+    &:hover .back{
+    transform: rotateY(360deg);
+
+    
     }
 }
 

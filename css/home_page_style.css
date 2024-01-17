@@ -349,6 +349,16 @@ body {
   border: 4px solid #bdb55b;
   box-shadow: inset 50px 50px 50px 50px rgba(200, 190, 89, 0.7215686275);
 }
+.menu .back .back-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: rgb(40, 39, 39);
+  margin: 1rem;
+  text-transform: uppercase;
+}
+.menu .back .back-title:hover {
+  color: rgb(45, 44, 44);
+}
 .menu .back ul {
   padding-left: 2rem;
 }
@@ -357,27 +367,17 @@ body {
   list-style: disc;
   margin: 0.7rem;
 }
-.menu:hover .back {
-  transform: rotateY(360deg);
-}
-.menu:hover .back .back-title {
-  font-size: 1.6rem;
-  font-weight: bold;
-  color: rgb(40, 39, 39);
-  margin: 1rem;
-  text-transform: uppercase;
-}
-.menu:hover .back .back-title:hover {
-  color: rgb(45, 44, 44);
-}
-.menu:hover .back .back-list {
+.menu .back li .back-list {
   color: black;
   font-size: 1.2rem;
   padding-top: 1rem;
   text-transform: uppercase;
 }
-.menu:hover .back .back-list:hover {
+.menu .back li .back-list:hover {
   color: rgb(62, 61, 61);
+}
+.menu:hover .back {
+  transform: rotateY(360deg);
 }
 
 .wrapper {
