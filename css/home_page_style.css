@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .nav__buttom {
   width: 200px;
   height: 40px;
@@ -21,19 +20,8 @@
   box-shadow: 0 2px 0 rgb(11, 18, 11);
 }
 
-body {
-  background: #EEE8AA;
-}
-
-.conteiner {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-
 .header {
   background: #BDB76B;
-  font-family: "Pacifico", cursive;
   box-shadow: 5px 5px 20px 1px #b4b071;
 }
 
@@ -41,58 +29,78 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.heder__block-adaptiv {
-  display: flex;
-  align-items: center;
-}
-
-.header__logo {
   padding: 1rem 0;
 }
 
-.header__logo-img {
-  width: 150px;
+.header__block-logo {
+  width: 10rem;
+}
+
+.logo__block-img {
+  width: 100%;
   border-radius: 50%;
 }
 
-.header__title {
+.header__block-title {
   text-align: center;
-  padding: 1rem;
   font-family: "Roboto", sans-serif;
 }
 
-.header-title {
-  font-size: 6rem;
+@media (max-width: 767px) {
+  .block__title-title {
+    font-size: calc(48px + 81.6 * (100vw - 320px) / 1920);
+  }
+}
+@media (min-width: 767px) {
+  .block__title-title {
+    font-size: calc(48px + 48 * 100vw / 1920);
+  }
 }
 
-.header-subtitle {
-  font-size: 4rem;
+@media (max-width: 767px) {
+  .block__title-subtitle {
+    font-size: calc(32px + 54.4 * (100vw - 320px) / 1920);
+  }
+}
+@media (min-width: 767px) {
+  .block__title-subtitle {
+    font-size: calc(32px + 32 * 100vw / 1920);
+  }
 }
 
-.header__data {
+.heder__block-items {
+  font-family: "Pacifico", cursive;
+}
+
+.block-items-data {
   display: flex;
 }
 
-.header__item-tel, .header__item-adres {
-  font-size: 2rem;
+@media (max-width: 767px) {
+  .items-data-adress, .items-data-tel, .items-data-sity {
+    font-size: calc(16px + 27.2 * (100vw - 320px) / 1920);
+  }
+}
+@media (min-width: 767px) {
+  .items-data-adress, .items-data-tel, .items-data-sity {
+    font-size: calc(16px + 16 * 100vw / 1920);
+  }
 }
 
-.header__item-img {
+.data__tel-img {
   margin: 3px 1rem;
   border-radius: 10px;
 }
 
-.header__sety {
+.header__block-sety {
   display: flex;
   justify-content: center;
-  gap: 2rem;
   text-align: center;
+  gap: 2rem;
   padding-top: 2rem;
 }
 
-.icons {
+.block__sety-icons {
   position: relative;
   width: 40px;
   border-radius: 10px;
@@ -100,305 +108,43 @@ body {
   top: 0;
   transition-duration: 0.5s;
 }
-.icons:active {
+.block__sety-icons:active {
   top: 2px;
   box-shadow: 0 1px 0 gray;
 }
 
-.heder__block-adaptiv-grid {
-  grid-template-rows: 150px 1fr;
-  grid-template-columns: 1fr 1fr;
-  justify-items: center;
-  align-items: center;
-  padding-top: 20px;
-  display: none;
-}
-
-@media (max-width: 1220px) {
+@media (max-width: 1025px) {
   .heder__block {
     justify-content: space-around;
   }
-  .header__data {
-    display: flex;
+  .block-items-data {
     flex-direction: column;
     align-items: center;
-    order: 2;
   }
-  .header__sety {
+  .items-data-adress {
+    margin: 0.8rem 0;
+  }
+  .header__block-sety {
     padding-top: 1rem;
   }
 }
-@media (max-width: 992px) {
-  .header-title {
-    font-size: 5rem;
-  }
-  .header-subtitle {
-    font-size: 3rem;
-  }
-  .header__item-adres, .header__item-tel {
-    padding-top: 5px;
-    font-size: 1.5rem;
-  }
-  .header__item-img {
+@media (max-width: 821px) {
+  .block__sety-icons {
     width: 30px;
   }
 }
-@media (max-width: 750px) {
-  .header-title {
-    font-size: 4rem;
+@media (max-width: 431px) {
+  .heder__block {
+    flex-direction: column;
   }
-  .header-subtitle {
-    font-size: 2rem;
+  .block__sety-icons {
+    width: 40px;
   }
-  .icons {
-    width: 30px;
-  }
-}
-@media (max-width: 550px) {
-  .conteiner {
-    max-width: 100%;
-    width: 100%;
-  }
-  .heder__item {
-    display: none;
-  }
-  .header__data {
-    margin-top: -1rem;
-  }
-  .heder__block-adaptiv {
-    display: none;
-  }
-  .heder__block-adaptiv-grid {
-    display: grid;
-    grid-template-rows: 150px 1fr;
-    grid-template-columns: 1fr 1fr;
-    justify-items: center;
+  .items-data-tel {
+    display: flex;
     align-items: center;
-    padding-bottom: 1rem;
-  }
-  .header__sety {
-    gap: 1rem;
-  }
-  .header__item-adres,
-  .header__item-tel {
-    padding-top: 5px;
-    font-size: 1rem;
-  }
-  .header__item-img {
-    width: 20px;
   }
 }
-@media (max-width: 350px) {
-  .conteiner {
-    width: 100%;
-  }
-  .header__logo-img {
-    width: 130px;
-    border-radius: 50%;
-  }
-  .header_-title {
-    font-size: 3rem;
-  }
-  .header__sety {
-    gap: 0.5rem;
-  }
-}
-.nav {
-  margin-top: 3rem;
-}
-
-.nav__menu {
-  display: flex;
-  gap: 25px;
-  justify-content: center;
-}
-
-.section {
-  text-align: center;
-}
-
-.section__title {
-  font-family: "Roboto", sans-serif;
-  font-size: 3rem;
-  letter-spacing: 1rem;
-  text-transform: uppercase;
-  font-weight: 700;
-  margin: 3% 0;
-  text-shadow: 3px 3px 30px #2b2b29;
-}
-
-.section__info {
-  display: flex;
-  border: 2px solid #b5b05e;
-  border-radius: 10px;
-  align-items: center;
-  background: #dcd79d;
-  font-family: "Pacifico", cursive;
-  box-shadow: 10px 10px 25px 1px #b4b071;
-}
-
-.section__foto {
-  flex: 0 0 60%;
-  background-image: url(../images/img/hanter-foto/охота\ секция\ \(1\).jpg);
-  height: 400px;
-  background-position: center;
-  background-size: cover;
-  border-radius: 10px;
-  border: 2px solid #b5b05e;
-}
-
-.fishing {
-  background-image: url(../images/img/fishing-foto/рыбалка.svg);
-}
-
-.self-defense {
-  background-image: url(../images/img/weapon-foto/самооборона.webp);
-}
-
-.tourism {
-  background-image: url(../images/img/tourizm-foto/turizm\ 1.svg);
-}
-
-.section__text {
-  flex: 1 1 auto;
-  text-align: center;
-  font-size: 1.5rem;
-  padding: 2%;
-}
-
-.slider {
-  position: relative;
-  padding: 0 60px;
-  margin-top: 1rem;
-}
-
-.slick-list {
-  overflow: hidden;
-}
-
-.slick-track {
-  display: flex;
-  text-align: center;
-}
-
-.slick-arrow {
-  position: absolute;
-  top: 40%;
-  z-index: 10;
-  font-size: 0;
-  width: 40px;
-  height: 70px;
-}
-
-.slick-prev {
-  left: 0;
-  background-image: url(../images/img/стрелка4\ 1.svg);
-  transform: rotateY(180deg);
-}
-
-.slick-next {
-  right: 0;
-  background-image: url(../images/img/стрелка4\ 1.svg);
-}
-
-.slick-dots {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.slick-dots button {
-  font-size: 0;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: white;
-}
-.slick-dots li {
-  margin: 0 10px;
-}
-
-.slick-active button {
-  background: transparent;
-  border: 2px solid black;
-}
-
-.menu {
-  position: relative;
-  perspective: 1000px;
-  cursor: pointer;
-  margin: 3rem 2rem 3rem 2rem;
-  display: flex;
-  justify-content: center;
-}
-.menu .front, .menu .back {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  transition: 1s;
-  backface-visibility: hidden;
-  border-radius: 15px;
-  box-shadow: 10px 10px 25px #a8a46b;
-}
-.menu .front {
-  position: absolute;
-  background: #bdb36b;
-  border: 2px solid #bdb55b;
-}
-.menu .front img {
-  width: 300px;
-  height: 335px;
-  border-radius: 10px;
-}
-.menu .front .front-title {
-  font-size: 2rem;
-  padding: 1rem;
-  text-transform: lowercase;
-}
-.menu:hover .front {
-  transform: rotateY(180deg);
-}
-.menu .back {
-  width: 300px;
-  height: 400px;
-  color: black;
-  justify-content: center;
-  transform: rotateY(180deg);
-  position: relative;
-  background: rgba(189, 183, 107, 0.8941176471);
-  border: 4px solid #bdb55b;
-  box-shadow: inset 50px 50px 50px 50px rgba(200, 190, 89, 0.7215686275);
-}
-.menu .back .back-title {
-  font-size: 1.6rem;
-  font-weight: bold;
-  color: rgb(40, 39, 39);
-  margin: 1rem;
-  text-transform: uppercase;
-}
-.menu .back .back-title:hover {
-  color: rgb(45, 44, 44);
-}
-.menu .back ul {
-  padding-left: 2rem;
-}
-.menu .back li {
-  text-align: start;
-  list-style: disc;
-  margin: 0.7rem;
-}
-.menu .back li .back-list {
-  color: black;
-  font-size: 1.2rem;
-  padding-top: 1rem;
-  text-transform: uppercase;
-}
-.menu .back li .back-list:hover {
-  color: rgb(62, 61, 61);
-}
-.menu:hover .back {
-  transform: rotateY(360deg);
-}
-
 .wrapper {
   position: fixed;
   top: 0;
@@ -508,7 +254,7 @@ body {
   box-shadow: 0 2px 0 rgb(11, 18, 11);
 }
 
-footer {
+.footer {
   background: #BDB76B;
   margin-top: 5rem;
 }
@@ -518,21 +264,22 @@ footer {
   justify-content: space-between;
 }
 
-.footer__block-adaptiv {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.footer__sety {
+.footer__block-sety {
   margin: 1rem 0;
 }
 
-.footer-title {
-  font-size: 3rem;
+@media (max-width: 767px) {
+  .block__sety-title {
+    font-size: calc(32px + 27.2 * (100vw - 320px) / 1920);
+  }
+}
+@media (min-width: 767px) {
+  .block__sety-title {
+    font-size: calc(32px + 16 * 100vw / 1920);
+  }
 }
 
-.footer__sety-one {
+.block__sety {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -540,7 +287,7 @@ footer {
   margin-top: 2.5rem;
 }
 
-.icons {
+.block__sety-icon {
   border-radius: 5px;
 }
 
@@ -548,21 +295,42 @@ footer {
   margin: 1rem auto;
 }
 
-.footer__title {
-  font-size: 4rem;
+@media (max-width: 767px) {
+  .footer__body-title {
+    font-size: calc(32px + 54.4 * (100vw - 320px) / 1920);
+  }
+}
+@media (min-width: 767px) {
+  .footer__body-title {
+    font-size: calc(32px + 32 * 100vw / 1920);
+  }
 }
 
-.footer__subtitle {
-  font-size: 3rem;
+@media (max-width: 767px) {
+  .footer__body-subtitle {
+    font-size: calc(16px + 54.4 * (100vw - 320px) / 1920);
+  }
+}
+@media (min-width: 767px) {
+  .footer__body-subtitle {
+    font-size: calc(16px + 32 * 100vw / 1920);
+  }
 }
 
-.footer__alladres {
-  font-size: 2rem;
+@media (max-width: 767px) {
+  .footer__body-adress {
+    font-size: calc(16px + 27.2 * (100vw - 320px) / 1920);
+  }
 }
-.footer__alladres a {
+@media (min-width: 767px) {
+  .footer__body-adress {
+    font-size: calc(16px + 16 * 100vw / 1920);
+  }
+}
+.footer__body-adress a {
   color: black;
 }
-.footer__alladres .footer__adres {
+.footer__body-adress .body__adress-adress {
   padding-bottom: 1rem;
 }
 
@@ -573,83 +341,264 @@ footer {
 
 @media (max-width: 1025px) {
   .footer__block {
+    padding: 1rem 0;
+  }
+}
+@media (max-width: 854px) {
+  .footer__block-sety {
+    text-align: center;
+  }
+}
+@media (max-width: 821px) {
+  .footer__block {
     flex-direction: column;
   }
-  .footer__body {
-    margin-right: 3rem;
+  .footer__block-sety {
+    order: 2;
   }
-  .footer__sety-one {
-    gap: 1rem;
-  }
-  .footer__sety {
-    text-align: center;
-    margin: 1rem 0 0 3rem;
-  }
-  .footer-title {
-    font-size: 2rem;
-  }
-  .footer__title {
-    font-size: 3rem;
-  }
-  .footer__subtitle {
-    font-size: 2rem;
-  }
-  .footer__map {
+  .block__sety {
     margin-top: 1rem;
   }
-  .footer__map-body {
+  .footer__map {
+    order: 3;
+  }
+  iframe {
     width: 100%;
   }
 }
-@media (max-width: 550px) {
-  .footer__block-adaptiv {
-    flex-direction: column;
-  }
-  .footer__body {
-    margin: auto;
-  }
-  .footer__sety-one {
-    gap: 2rem;
-    margin: 0.5rem auto;
-  }
-  .icons {
-    width: 25px;
-    height: 25px;
-    margin: 0;
-  }
-  .footer__sety {
-    margin: 0.5rem auto;
-  }
-  .footer-title {
-    font-size: 1rem;
-  }
-  .footer__title {
-    font-size: 2rem;
-  }
-  .footer__subtitle {
-    font-size: 1rem;
-  }
-  .footer__alladres {
-    font-size: 1rem;
-  }
-  .footer__alladres .footer__adres {
-    padding-bottom: 0.5rem;
-  }
-  .tel-logo {
-    width: 15px;
-    height: 15px;
-  }
-  .on-all {
-    display: none;
+.body {
+  background: #EEE8AA;
+}
+
+.conteiner {
+  max-width: 1310px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.nav {
+  margin-top: 3rem;
+}
+
+.nav__menu {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.section {
+  text-align: center;
+}
+
+.section__title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+  text-shadow: 3px 3px 30px #2b2b29;
+  margin: 3% 0;
+}
+@media (max-width: 767px) {
+  .section__title {
+    font-size: calc(16px + 54.4 * (100vw - 320px) / 1920);
   }
 }
+@media (min-width: 767px) {
+  .section__title {
+    font-size: calc(16px + 32 * 100vw / 1920);
+  }
+}
+
+.section__info {
+  display: flex;
+  align-items: center;
+  background: #dcd79d;
+  border: 2px solid #b5b05e;
+  border-radius: 10px;
+  font-family: "Pacifico", cursive;
+  box-shadow: 10px 10px 25px 1px #b4b071;
+}
+
+.section__foto {
+  flex: 0 0 60%;
+  height: 25rem;
+  background-image: url(../images/img/hanter-foto/hunting.jpg);
+  background-position: center;
+  background-size: cover;
+  border: 2px solid #b5b05e;
+  border-radius: 10px;
+}
+
+.fishing {
+  background-image: url(../images/img/fishing-foto/fishing.svg);
+}
+
+.self-defense {
+  background-image: url(../images/img/weapon-foto/self-defense.webp);
+}
+
+.tourism {
+  background-image: url(../images/img/tourizm-foto/turizm\ 1.svg);
+}
+
+.section__text {
+  text-align: center;
+  flex: 1 1 auto;
+  padding: 2%;
+}
+@media (max-width: 767px) {
+  .section__text {
+    font-size: calc(16px + 13.6 * (100vw - 320px) / 1920);
+  }
+}
+@media (min-width: 767px) {
+  .section__text {
+    font-size: calc(16px + 8 * 100vw / 1920);
+  }
+}
+
+.slider {
+  position: relative;
+  padding: 0 3.75rem;
+  margin-top: 1rem;
+}
+
+.slick-list {
+  overflow: hidden;
+}
+
+.slick-track {
+  display: flex;
+  text-align: center;
+}
+
+.slick-arrow {
+  position: absolute;
+  width: 2.5rem;
+  height: 4.4rem;
+  top: 40%;
+  font-size: 0;
+  z-index: 10;
+}
+
+.slick-prev {
+  left: 0;
+  background-image: url(../images/img/arrow.svg);
+  transform: rotateY(180deg);
+}
+
+.slick-next {
+  right: 0;
+  background-image: url(../images/img/arrow.svg);
+}
+
+.slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slick-dots button {
+  font-size: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: white;
+}
+.slick-dots li {
+  margin: 0 10px;
+}
+
+.slick-active button {
+  background: transparent;
+  border: 2px solid black;
+}
+
+.menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  perspective: 62.5rem;
+  margin: 3rem 2rem 3rem 2rem;
+  cursor: pointer;
+}
+.menu .front, .menu .back {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  transition: 1s;
+  backface-visibility: hidden;
+  border-radius: 1rem;
+  box-shadow: 10px 10px 25px #a8a46b;
+}
+.menu .front {
+  position: absolute;
+  background: #bdb36b;
+  border: 2px solid #bdb55b;
+}
+.menu .front img {
+  width: 21rem;
+  height: 24rem;
+  border-radius: 10px;
+}
+.menu .front .front-title {
+  font-size: 2rem;
+  padding: 1rem;
+  text-transform: lowercase;
+}
+.menu:hover .front {
+  transform: rotateY(180deg);
+}
+.menu .back {
+  position: relative;
+  justify-content: center;
+  width: 21rem;
+  height: 28.2rem;
+  background: rgba(189, 183, 107, 0.8941176471);
+  color: black;
+  border: 4px solid #bdb55b;
+  box-shadow: inset 50px 50px 50px 50px rgba(200, 190, 89, 0.7215686275);
+  transform: rotateY(180deg);
+}
+.menu .back .back-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: rgb(23, 23, 23);
+  text-transform: uppercase;
+  margin: 1rem;
+}
+.menu .back .back-title:hover {
+  color: rgb(77, 76, 76);
+}
+.menu .back ul {
+  padding-left: 2rem;
+}
+.menu .back li {
+  text-align: start;
+  list-style: disc;
+  margin: 0.7rem;
+}
+.menu .back li .back-list {
+  color: black;
+  font-size: 1.2rem;
+  padding-top: 1rem;
+  text-transform: uppercase;
+}
+.menu .back li .back-list:hover {
+  color: rgb(157, 110, 110);
+}
+.menu:hover .back {
+  transform: rotateY(360deg);
+}
+
 .on-all {
   width: 50px;
   height: 50px;
   position: fixed;
   top: 90%;
   right: 1%;
-  background-image: url(../images/logo/rocket\ 1.svg);
+  background-image: url(../images/logo/button\ all.jpg);
+  background-position: center;
+  background-size: cover;
   border-radius: 10px;
   border: 1px solid;
   transition-duration: 1s;
@@ -659,7 +608,6 @@ footer {
   animation-iteration-count: infinite;
 }
 .on-all:hover {
-  background: url(../images/logo/rocket2.svg);
   animation-play-state: paused;
 }
 
@@ -680,19 +628,16 @@ footer {
   .nav__menu {
     flex-wrap: wrap;
   }
-  .section__title {
-    font-size: 2rem;
-  }
   .section__foto {
     flex: none;
-    height: 200px;
+    height: 20rem;
     width: 100%;
+  }
+  .on-all {
+    display: none;
   }
 }
 @media (max-width: 840px) {
-  .section__title {
-    font-size: 1.5rem;
-  }
   .slider {
     padding: 0 5px;
   }
@@ -706,9 +651,6 @@ footer {
 @media (max-width: 350px) {
   .conteiner {
     width: 100%;
-  }
-  .section__title {
-    font-size: 17px;
   }
   .menu .front img {
     width: 250px;
