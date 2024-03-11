@@ -1,31 +1,38 @@
 @import "./Email.scss";
 @import "./fotter.scss";
 @import "./_header.scss";
+@import './changeable';
+@import './mixins';
+@import './templates';
 
 body {
     display: flex;
     flex-direction: column;
     min-height: 100%;
     background: #EEE8AA;
+    
 }
 main{
     flex: 1 1 auto;
 }
 
 .conteiner {
-    max-width: 1280px;
+    max-width: 1310px;
     margin: 0 auto;
     padding: 0 15px;
 }
 
 
 
-// main
+// =================main===================
 
-// slider
+// ===========slider================
 .slider {
     position: relative;
     margin-top: 1rem;
+    border: 5px solid $colobg;
+    box-shadow: $color-box-shadow;
+    border-radius: 10px;
 }
 
 .slick-list {
@@ -39,7 +46,7 @@ main{
 }
 
 
-// menu
+// ==============menu==================
 
 .menu {
     display: flex;
@@ -48,8 +55,15 @@ main{
 
 .menu__title {
     text-align: center;
-    font-size: 6rem;
-    margin: 2rem;
+    @include adaptiv-font(96, 64);
+    text-shadow: 3px 3px 30px $title-text-shadow;
+    margin-top: 2rem;
+}
+.menu__subtitle {
+    text-align: center;
+    @include adaptiv-font(48, 32);
+    text-shadow: 3px 3px 30px $title-text-shadow;
+    margin-top: 2rem;
 }
 
 .menu__one {
@@ -57,15 +71,13 @@ main{
     justify-content: center;
     flex-wrap: wrap;
     gap: 2rem;
-    margin: 3rem 0;
-    border: 2px solid rgb(69, 69, 69);
-    background: #ece493;
+    width: fit-content;
+    border: 5px solid $colobg;
+    box-shadow: $color-box-shadow;
+    border-radius: 1rem;
+    background: $menu-color-bg;
+    margin: 3rem auto;
     padding: 2rem;
-}
-
-.menu__subtitle {
-    text-align: center;
-    font-size: 3rem;
 }
 
 .menu__items {
@@ -93,7 +105,7 @@ main{
     text-align: center;
 }
 
-// product card
+// ===========product card=============
 
 .products__card{
     display: flex;
@@ -108,8 +120,9 @@ main{
     flex-direction: column;
     align-items: center;
     width: 20rem;
-    border: 4px solid rgb(98, 97, 97);
-    background: #ece493;
+    border: 4px solid $card-border-color;
+    background: $menu-color-bg;
+    box-shadow: 3px 3px 30px $title-text-shadow;
     border-radius: 10px;
 }
 
@@ -120,40 +133,18 @@ main{
 
 .product-name{
     font-size: 1.5rem;
-    padding: 1rem 0 ;
-    // text-align: center;
+    padding: 1rem 0.5rem;
 }
 
 .product-price{
     font-size: 2rem;
     color: red;
+    margin-bottom: 0.5rem;
 }
 
 
-
-
-
-
-
 .on-all {
-    width: 50px;
-    height: 50px;
-    position: fixed;
-    top: 90%;
-    right: 1%;
-    background-image: url(../images/logo/rocket\ 1.svg);
-    border-radius: 10px;
-    border: 1px solid;
-    transition-duration: 1s;
-    animation-name: on-all;
-    animation-duration: 5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-
-    &:hover {
-        background: url(../images/logo/rocket2.svg);
-        animation-play-state: paused;
-    }
+    @extend %button-on-all;
 }
 
 @keyframes on-all {
@@ -172,13 +163,7 @@ main{
     .activ {
         border: 4px solid gray;
     }
-    
-    .menu__title {
-        font-size: 4rem;
-    }
-    .menu__subtitle {
-        font-size: 2rem;
-    }
+
     .menu__one {
         padding: 1rem;
     }

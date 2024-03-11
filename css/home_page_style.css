@@ -20,6 +20,27 @@
   box-shadow: 0 2px 0 rgb(11, 18, 11);
 }
 
+.on-all {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  top: 90%;
+  right: 1%;
+  background-image: url(../images/logo/button\ all.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  border: 1px solid;
+  transition-duration: 1s;
+  animation-name: on-all;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.on-all:hover {
+  animation-play-state: paused;
+}
+
 .header {
   background: #BDB76B;
   box-shadow: 5px 5px 20px 1px #b4b071;
@@ -262,6 +283,7 @@
 .footer__block {
   display: flex;
   justify-content: space-between;
+  padding: 1rem 0;
 }
 
 .footer__block-sety {
@@ -588,27 +610,6 @@
 }
 .menu:hover .back {
   transform: rotateY(360deg);
-}
-
-.on-all {
-  width: 50px;
-  height: 50px;
-  position: fixed;
-  top: 90%;
-  right: 1%;
-  background-image: url(../images/logo/button\ all.jpg);
-  background-position: center;
-  background-size: cover;
-  border-radius: 10px;
-  border: 1px solid;
-  transition-duration: 1s;
-  animation-name: on-all;
-  animation-duration: 5s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-.on-all:hover {
-  animation-play-state: paused;
 }
 
 @keyframes on-all {
