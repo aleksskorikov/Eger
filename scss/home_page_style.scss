@@ -5,7 +5,6 @@
 @import "./Email.scss";
 @import "./fotter.scss";
 
-
 .body{
     background: $colorbg-body;
 }
@@ -16,57 +15,54 @@
     padding: 0 15px;
 }
 
-// ==================main===================
-
 .nav {
     margin-top: 3rem;
+    &__menu {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 25px;
+    }
+    &__buttom {
+        @extend %navbuttom;
+    }
 }
-
-.nav__menu {
-    display: flex;
-    justify-content: center;
-	gap: 25px;
-}
-
-.nav__buttom {
-    @extend %navbuttom;
-}
-
-// =============section=================
 
 .section {
     text-align: center;
-}
-
-.section__title {
-    font-family:$fontfamily-title;
-    @include adaptiv-font(48, 16);
-    font-weight: 700;
-	letter-spacing: 1rem;
-	text-transform: uppercase;
-	text-shadow: 3px 3px 30px $title-text-shadow;
-	margin: 3% 0; 
-}
-
-.section__info {
-    display: flex;
-    align-items: center;
-    background:$info-color-bg;
-    border: 2px solid $info-color-border;
-    border-radius: 10px;
-    font-family: $fontfamily-data;
-    box-shadow: 10px 10px 25px 1px $info-color-box-shadow;
-}
-
-
-.section__foto {
-    flex: 0 0 60%;
-    height: 25rem;
-    background-image: url(../images/img/hanter-foto/hunting.jpg);
-    background-position: center;
-    background-size: cover;
-    border: 2px solid $info-color-border;
-    border-radius: 10px;
+    &__title {
+        font-family: $fontfamily-title;
+        @include adaptiv-font(48, 16);
+        font-weight: 700;
+        letter-spacing: 1rem;
+        text-transform: uppercase;
+        text-shadow: 3px 3px 30px $title-text-shadow;
+        margin: 3% 0;
+    }
+    &__info {
+        display: flex;
+        align-items: center;
+        background: $info-color-bg;
+        border: 2px solid $info-color-border;
+        border-radius: 10px;
+        font-family: $fontfamily-data;
+        box-shadow: 10px 10px 25px 1px $info-color-box-shadow;
+    }
+    &__foto {
+        flex: 0 0 60%;
+        height: 25rem;
+        background-image: url(../images/img/hanter-foto/hunting.jpg);
+        background-position: center;
+        background-size: cover;
+        border: 2px solid $info-color-border;
+        border-radius: 10px;
+    }
+    &__text {
+        text-align: center;
+        flex: 1 1 auto;
+        @include adaptiv-font(24, 16);
+        padding: 2%;
+    }
 }
 
 .fishing{
@@ -81,15 +77,8 @@
     background-image: url(../images/img/tourizm-foto/turizm\ 1.svg);
 }
 
-.section__text {
-    text-align: center;
-    flex: 1 1 auto;
-    @include adaptiv-font(24, 16);
-    padding: 2%;
-}
 
-// =================slider==================
-
+// ===================slider==========================
 
 .slider{
     position: relative;
@@ -124,7 +113,6 @@
     background-image: url(../images/img/arrow.svg);
 }
 
-    
 .slick-dots{
     display: flex;
     align-items: center;
@@ -247,16 +235,15 @@
 
 
 @media (max-width: 900px) {
-    .section__info{
-        flex-direction: column;
-    }
-    .nav__menu{
-        flex-wrap: wrap;
-    }
-    .section__foto{
-        flex: none;
-        height: 20rem;
-        width: 100%;
+    .section{
+        &__info{
+            flex-direction: column;
+        }
+        &__foto{
+            flex: none;
+            height: 20rem;
+            width: 100%;
+        }
     }
     .on-all{
         display: none;

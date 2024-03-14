@@ -22,8 +22,6 @@ main{
     padding: 0 15px;
 }
 
-
-
 // =================main===================
 
 // ===========slider================
@@ -51,69 +49,67 @@ main{
 .menu {
     display: flex;
     flex-direction: column;
-}
-
-.menu__title {
-    text-align: center;
-    @include adaptiv-font(96, 64);
-    text-shadow: 3px 3px 30px $title-text-shadow;
-    margin-top: 2rem;
-}
-.menu__subtitle {
-    text-align: center;
-    @include adaptiv-font(48, 32);
-    text-shadow: 3px 3px 30px $title-text-shadow;
-    margin-top: 2rem;
-}
-
-.menu__one {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-    width: fit-content;
-    border: 5px solid $colobg;
-    box-shadow: $color-box-shadow;
-    border-radius: 1rem;
-    background: $menu-color-bg;
-    margin: 3rem auto;
-    padding: 2rem;
-}
-
-.menu__items {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    cursor: pointer;
-    padding-top: 15px;
-    
+    &__title {
+        text-align: center;
+        @include adaptiv-font(96, 64);
+        text-shadow: 3px 3px 30px $title-text-shadow;
+        margin-top: 2rem;
+    }
+    &__subtitle{
+        text-align: center;
+        @include adaptiv-font(48, 32);
+        text-shadow: 3px 3px 30px $title-text-shadow;
+        margin-top: 2rem;
+    }
+    &__one {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+        width: fit-content;
+        border: 5px solid $colobg;
+        box-shadow: $color-box-shadow;
+        border-radius: 1rem;
+        background: $menu-color-bg;
+        margin: 3rem auto;
+        padding: 2rem;
+    }
+    &__items {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+        padding-top: 15px;
+    }
+    &__img, .menu-two__img {
+        width: 10rem;
+        height: 10rem;
+        border-radius: 50%;
+    }
+    &__name {
+        font-size: 1.5rem;
+        max-width: 15rem;
+        text-align: center;
+    }
 }
 
 .activ{
     border: 10px solid gray;
 }
 
-.menu__img, .menu-two__img {
-    width: 10rem;
-    height: 10rem;
-    border-radius: 50%;
-}
 
-.menu__name {
-    font-size: 1.5rem;
-    max-width: 15rem;
-    text-align: center;
-}
 
 // ===========product card=============
-
-.products__card{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    cursor: pointer;
+.products {
+    &__card {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+        cursor: pointer;
+    }
 }
+
 
 .card, .card-two{
     display: flex;
@@ -140,6 +136,7 @@ main{
     font-size: 2rem;
     color: red;
     margin-bottom: 0.5rem;
+    text-align: center;
 }
 
 

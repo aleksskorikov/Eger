@@ -18,7 +18,7 @@
 <body class="body">
 <header class="header" id="header">
     <div class="conteiner">
-        <div class="heder__block">
+        <div class="header__block">
             <div class="header__block-logo">
                 <img src="../images/logo/logo 1.svg" alt="logo" class="logo__block-img">
             </div>
@@ -26,7 +26,7 @@
                 <h1 class="block__title-title">ЄГЕР</h1>
                 <h2 class="block__title-subtitle">магазин зброї</h2>
             </div>
-            <div class="heder__block-items">
+            <div class="header__block-items">
                 <div class="block-items-data">
                     <p class="items-data-sity">м. Запоріжжя </p>
                     <p class="items-data-adress">вул. Базарна 14б</p>
@@ -658,22 +658,25 @@
 
     <!-- form Email -->
 
-<div class="wrapper">
-    <div class="form">
-        <button class="cloze"><img src="../images/logo/icons.svg" alt=""></button>
-        <form action="#" id="form" >
+<div class="wrapper"  id="section__form">
+    <div class="form" id="form">
+        <button class="form-close"><img src="../images/logo/icons.svg" alt=""></button>
+        <form  id="form" >
             <h1 class="form__title">надсилання даних на пошту</h1>
             <div class="form__item">
                 <label for="formName" class="form__lable">ім'я <span>*</span></label>
-                <input id="formName" type="text"  placeholder="Ваше і'мя" name="name" class="form__input" required>
+                <span class="name-error">Форма повинна містити тільки літери!</span>
+                <input id="formName" type="text"  placeholder="Ваше і'мя" name="name" class="form__input" >
             </div>
             <div class="form__item">
                 <label for="formEmail" class="form__lable">Е-маїл <span>*</span></label>
-                <input id="formEmail" type="email" name="Email" placeholder="Ваш E-mail" class="form__input" required>
+                <span class="mail-error">Введіть коректну адресу!</span>
+                <input id="formEmail" type="email" name="Email" placeholder="Ваш E-mail" class="form__input" >
             </div>
             <div class="form__item">
                 <label for="formMessage" class="form__lable">повідомлення <span>*</span></label>
-                <textarea name="message" id="formMessage" placeholder="Ваше повідомлення" class="form__input message" required></textarea>
+                <span class="message-error">Напишить повідомлення!</span>
+                <textarea name="message" id="formMessage" placeholder="Ваше повідомлення" class="form__input message" ></textarea>
             </div>
             <button type="submit"  class="form__button">Відправити</button>
         </form>

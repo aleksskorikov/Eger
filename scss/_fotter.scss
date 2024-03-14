@@ -1,89 +1,88 @@
 @import './changeable';
 @import './mixins';
 
-.footer{
+.footer {
     background: $colobg;
     margin-top: 5rem;
-}
-
-.footer__block {
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem 0;
-}
-
-.footer__block-sety {
-    margin: 1rem  0;
-}
-
-.block__sety-title {
-    @include adaptiv-font(48, 32);
-}
-
-.block__sety {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
-    margin-top: 2.5rem;
-}
-
-.block__sety-icon {
-    border-radius: 5px;
-}
-
-.footer__body {
-    margin: 1rem auto;
-}
-
-.footer__body-title {
-    @include adaptiv-font(64, 32);
-}
-
-.footer__body-subtitle{
-    @include adaptiv-font(48, 16);
-}
-
-.footer__body-adress {
-    @include adaptiv-font(32, 16);
-    a{
-        color: black;
+    &__block {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 0;
     }
-    .body__adress-adress{
+    &__block-sety {
+        margin: 1rem 0;
+    }
+    &__body {
+        text-align: center;
+        margin: 1rem auto;
+    }
+    &__body-title {
+        @include adaptiv-font(64, 32);
+    }
+    &__body-subtitle {
+        @include adaptiv-font(48, 16);
+    }
+    &__body-adress {
+        @include adaptiv-font(32, 16);
+        a {
+            color: black;
+        }
+    }
+    &__map {
+        border: 2px solid black;
+        border-radius: 5px;
+    }
+}
+
+
+.block {
+    &__sety-title {
+        @include adaptiv-font(48, 32);
+    }
+    &__sety {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+        margin-top: 2.5rem;
+    }
+    &__sety-icon {
+        border-radius: 5px;
+    }
+}
+
+.body {
+    &__adress-adress {
         padding-bottom: 1rem;
     }
 }
 
-.footer__map {
-    border: 2px solid black;
-    border-radius: 5px;
-}
-
-@media (max-width: 1025px) {
-    .footer__block{
-        padding: 1rem 0;
-    }
-}
 @media (max-width: 854px) {
-    .footer__block-sety {
-        text-align: center;
+    .footer{
+        &__block-sety{
+            text-align: center;   
+        }
     }
 }
 @media (max-width: 821px) {
-    .footer__block{
-        flex-direction: column;
-    }
-    .footer__block-sety{
-        order: 2;
-    }
-    .block__sety{
-        margin-top: 1rem;
-    }
-    .footer__map{
-        order: 3;
-    }
-    iframe{
-        width: 100%;
+    .footer{
+        &__block{
+            flex-direction: column;
+        }
+        &__block-sety{
+            order: 2;
+        }
+        &__map{
+            order: 3;
+        }
+        .block{
+            &__sety{
+                margin-top: 1rem;
+            }
+        }
+        iframe {
+            width: 100%;
+        }
     }
 }
 
