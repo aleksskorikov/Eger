@@ -35,6 +35,11 @@ for (let i = 0; i < links.length; i++) {
     }
 }
 
+
+
+
+
+
 // форма емфил
 
 // const btns = document.querySelectorAll(".btn");
