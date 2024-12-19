@@ -14,8 +14,8 @@ $(document).ready(function () {
 
 
 // кнопка на верх
-document.getElementById("on-all").onclick = function ()  {
-document.getElementById("header").scrollIntoView({behavior:"smooth"});
+document.querySelector("#on-all").onclick = function ()  {
+document.querySelector("#header").scrollIntoView({behavior:"smooth"});
 }
 
 
